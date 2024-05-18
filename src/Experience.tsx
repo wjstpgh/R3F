@@ -7,6 +7,8 @@ import {
   Text,
   TransformControls,
 } from "@react-three/drei";
+import { button, useControls } from "leva";
+import { Perf } from "r3f-perf";
 import { useRef } from "react";
 import { Mesh } from "three";
 
@@ -14,8 +16,25 @@ export default function Experience() {
   const sphere = useRef<Mesh>(null!);
   const cube = useRef<Mesh>(null!);
 
+  const { position, color, visible } = useControls("sphere", {
+    position: { value: { x: -2, y: 0 }, step: 0.01, joystick: "invertY" },
+    color: "hsla(100deg,100%,50%,0.5)",
+    visible: true,
+    myInterval: {
+      min: 0,
+      max: 10,
+      value: [4, 5],
+    },
+    clickMe: button(() => {}),
+    choice: { options: ["a", "b", "c"] },
+  });
+
+  const { perfVisible } = useControls({ perfVisible: false });
+
   return (
     <>
+      {perfVisible && <Perf position="top-left" />}
+
       <OrbitControls makeDefault />
       <directionalLight position={[1, 2, 3]} intensity={4.5} />
       <ambientLight intensity={1.5} />
@@ -28,9 +47,13 @@ export default function Experience() {
         scale={100}
         fixed
       >
-        <mesh ref={sphere} position-x={-2}>
+        <mesh
+          ref={sphere}
+          position={[position.x, position.y, 0]}
+          visible={visible}
+        >
           <sphereGeometry />
-          <meshStandardMaterial color="mediumpurple" />
+          <meshStandardMaterial color={color} />
           <Html
             position={[0, 1.5, 0]}
             wrapperClass="label"
