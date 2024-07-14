@@ -7,7 +7,7 @@ const Melon = () => {
   const sphere = useRef<Mesh>(null!);
 
   const { position, color, visible } = useControls("sphere", {
-    position: { value: { x: -2, y: 0 }, step: 0.01, joystick: "invertY" },
+    position: { value: { x: -4, y: 1 }, step: 0.01, joystick: "invertY" },
     color: "hsla(100deg,100%,50%,0.5)",
     visible: true,
     myInterval: {
