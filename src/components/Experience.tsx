@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { OrbitControls } from "@react-three/drei";
 import { useControls } from "leva";
 import { Perf } from "r3f-perf";
@@ -6,6 +7,7 @@ import Melon from "./Melon";
 import Heaven from "./environment";
 import WelcomeBalloon from "./balloon";
 import Lawn from "./lawn";
+import HungryFox from "./hungry-fox";
 
 export default function Experience() {
   const { perfVisible } = useControls({ perfVisible: false });
@@ -18,6 +20,8 @@ export default function Experience() {
       <Heaven />
 
       <Melon />
+
+      <HungryFox />
 
       <Lawn />
 
