@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import { OrbitControls } from "@react-three/drei";
 import { useControls } from "leva";
 import { Perf } from "r3f-perf";
@@ -8,9 +7,13 @@ import Heaven from "./environment";
 import WelcomeBalloon from "./balloon";
 import Lawn from "./lawn";
 import HungryFox from "./hungry-fox";
+import DonutText3D from "./3dtext";
 
 export default function Experience() {
-  const { perfVisible } = useControls({ perfVisible: false });
+  const { perfVisible, view3DText } = useControls({
+    perfVisible: false,
+    view3DText: false,
+  });
 
   return (
     <>
@@ -22,6 +25,8 @@ export default function Experience() {
       <Melon />
 
       <HungryFox />
+
+      {view3DText && <DonutText3D />}
 
       <Lawn />
 
