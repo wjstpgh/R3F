@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
-import Experience from "./components/Experience";
 import { ACESFilmicToneMapping, SRGBColorSpace } from "three";
+
+import Experience from "./components/Experience";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       shadows={false}
     >
       <Experience />
+      {/* <Portal /> */}
     </Canvas>
   );
 }
