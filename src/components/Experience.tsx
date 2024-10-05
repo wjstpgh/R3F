@@ -8,6 +8,7 @@ import WelcomeBalloon from "./balloon";
 import Lawn from "./lawn";
 import HungryFox from "./hungry-fox";
 import DonutText3D from "./3dtext";
+import MouseEvent from "./mouse-event";
 
 export default function Experience() {
   const { perfVisible, view3DText } = useControls({
@@ -27,6 +28,8 @@ export default function Experience() {
       <HungryFox />
 
       {view3DText && <DonutText3D />}
+
+      <MouseEvent />
 
       <Lawn />
 
