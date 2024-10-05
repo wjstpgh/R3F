@@ -36,7 +36,7 @@ const Portal = () => {
   });
 
   return (
-    <>
+    <group position={[-6, 1, -5]}>
       <color args={["#030202"]} attach="background" />
 
       <OrbitControls makeDefault />
@@ -85,7 +85,7 @@ const Portal = () => {
           count={40}
         />
       </Center>
-    </>
+    </group>
   );
 };
 
