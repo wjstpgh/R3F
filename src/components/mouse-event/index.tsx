@@ -20,7 +20,7 @@ const MouseEvent = () => {
     <>
       <mesh position={[4, 1, 2]} onClick={(e) => e.stopPropagation()}>
         <sphereGeometry />
-        <meshStandardMaterial color="orange" />
+        <meshStandardMaterial color={[1.5, 1, 4 * 100]} />
       </mesh>
 
       <mesh

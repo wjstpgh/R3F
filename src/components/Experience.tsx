@@ -10,15 +10,19 @@ import HungryFox from "./hungry-fox";
 import DonutText3D from "./3dtext";
 import MouseEvent from "./mouse-event";
 import Portal from "./portal";
+import PostProcessing from "./postProcessing";
 
 export default function Experience() {
-  const { perfVisible, view3DText } = useControls({
+  const { postProcessing, perfVisible, view3DText } = useControls({
+    postProcessing: true,
     perfVisible: false,
     view3DText: false,
   });
 
   return (
     <>
+      {postProcessing && <PostProcessing />}
+
       {perfVisible && <Perf position="top-left" />}
       <OrbitControls makeDefault />
 
