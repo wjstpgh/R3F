@@ -11,6 +11,7 @@ import DonutText3D from "./3dtext";
 import MouseEvent from "./mouse-event";
 import Portal from "./portal";
 import PostProcessing from "./postProcessing";
+import Physics from "./physics";
 
 export default function Experience() {
   const { postProcessing, perfVisible, view3DText } = useControls({
@@ -37,6 +38,8 @@ export default function Experience() {
       {view3DText && <DonutText3D />}
 
       <MouseEvent />
+
+      <Physics />
 
       <Lawn />
 
