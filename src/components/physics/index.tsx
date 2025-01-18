@@ -26,7 +26,7 @@ const Physics = () => {
   const cube = useRef<RapierRigidBody>(null!);
   const twister = useRef<RapierRigidBody>(null!);
 
-  const hamburger = useGLTF("./resources/hamburger-draco.glb");
+  const hamburger = useGLTF("/resources/hamburger-draco.glb");
 
   const cubeJump = () => {
     const mass = cube.current.mass();
