@@ -3,7 +3,7 @@ import { useControls } from "leva";
 import { useAnimations, useGLTF } from "@react-three/drei";
 
 const Fox = () => {
-  const fox = useGLTF("./resources/model/Fox/glTF/Fox.gltf");
+  const fox = useGLTF("/resources/model/Fox/glTF/Fox.gltf");
   const animation = useAnimations(fox.animations, fox.scene);
 
   const { animationName } = useControls({

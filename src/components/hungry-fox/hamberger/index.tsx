@@ -3,7 +3,7 @@ import { GLTFResult } from "./type";
 
 const Hamburger = (props: JSX.IntrinsicElements["group"]) => {
   const { nodes, materials } = useGLTF(
-    "./resources/hamburger-draco.glb"
+    "/resources/hamburger-draco.glb"
   ) as GLTFResult;
 
   return (
@@ -41,4 +41,4 @@ const Hamburger = (props: JSX.IntrinsicElements["group"]) => {
 
 export default Hamburger;
 
-useGLTF.preload("./resources/hamburger-draco.glb");
+useGLTF.preload("/resources/hamburger-draco.glb");

@@ -1,7 +1,7 @@
 import { Clone, useGLTF } from "@react-three/drei";
 
 const Hamberger = () => {
-  const model = useGLTF("./resources/hamburger-draco.glb");
+  const model = useGLTF("/resources/hamburger-draco.glb");
 
   return (
     <>
@@ -14,4 +14,4 @@ const Hamberger = () => {
 
 export default Hamberger;
 
-useGLTF.preload("./resources/hamburger-draco.glb");
+useGLTF.preload("/resources/hamburger-draco.glb");

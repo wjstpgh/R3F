@@ -9,7 +9,7 @@ import {
 } from "@react-three/drei";
 
 const Portfolio = () => {
-  const computer = useGLTF("./resources/model/macbook.gltf");
+  const computer = useGLTF("/resources/model/macbook.gltf");
 
   return (
     <>
